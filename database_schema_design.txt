@@ -1,0 +1,63 @@
+User
+	system id - m (mandatory)
+	name - m
+	username (email id) - m
+	password - m
+	school - m
+	school start date - m
+	school end date - m
+	phone number - m
+	picture - m
+	user type (1-driver, 2-passenger) - m
+	driver's license (yes, no) - do we need to store license number? - o(optional)
+	car insurance (yes, no) - do we need to store insurance details? - o
+	registered vehicle (yes, no) - o
+	status (active, inactive) - m
+	date created - o
+	date modified - o
+	created by - o
+	modified by - o
+	
+Vehicle
+	system id - m
+	make - m
+	model - m
+	color - m
+	available seats - m
+	picture - m
+	user id - m
+	date created - o
+	date modified - o
+	created by - o
+	modified by - o
+	
+Location (static list as of now)
+	system id - m
+	name - m
+	
+Bus Stop (static list as of now)
+	system id - m
+	name - m
+	location id - o
+	
+Route (route is an ordered list of bus stops, can be kept simple as start and end bus stops for now)
+	system id - m
+	start point (bus stop) - m
+	end point (bus stop) - m
+	
+Trip (added by a driver)
+	system id - m
+	start time - m
+	route id - m
+	status - m (active, inactive, in progress, completed)
+	user id - m
+	vehicle id - ? (in case of multiple vehicles owned by driver)
+	date created - o
+	date modified - o
+	created by - o
+	modified by - o
+
+Trip Log (added by a passenger)
+	system id - m
+	trip id - m
+	passenger id - m
